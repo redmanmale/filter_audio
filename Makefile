@@ -24,7 +24,6 @@ else ifneq (, $(shell echo $(UNAME_S) | grep -E 'MSYS|MINGW|CYGWIN'))
     SHARED_EXT = dll
     TARGET = $(BASE_NAME).$(SHARED_EXT)
     TARGET_ONLY = YES
-    NO_STATIC = 1
     LDFLAGS += -Wl,--out-implib,$(TARGET).a
 else
     SHARED_EXT = so
